@@ -1,27 +1,23 @@
-import { Box, TextField } from "@mui/material";
-import React from "react";
+import { Box, TextField } from '@mui/material';
+import React from 'react';
 
-function Form() {
+function Form({ formData, handleFormChange }) {
   return (
-    <div >
-      <Box 
+    <div>
+      <Box
         component="form"
-        sx={{ "& .MuiTextField-root": { m: 1, width: "25ch", } }}
+        sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' } }}
         noValidate
         autoComplete="off"
       >
-        {/* duration: 8.322388,
-      orig_bytes: 600,
-      resp_bytes: 0,
-      orig_pkts: 0,
-      orig_ip_bytes: 656,
-      resp_pkts: 0,
-      resp_ip_bytes: 0, */}
-        <div >
+        <div>
           <TextField
-            id="outlined-number"
+            id="duration"
             label="duration"
             type="number"
+            value={formData.duration}
+            onChange={handleFormChange}
+            name="duration"
             slotProps={{
               inputLabel: {
                 shrink: true,
@@ -29,19 +25,25 @@ function Form() {
             }}
           />
           <TextField
-            id="outlined-number"
+            id="orig_bytes"
             label="orig bytes"
             type="number"
+            value={formData.orig_bytes}
+            onChange={handleFormChange}
+            name="orig_bytes"
             slotProps={{
               inputLabel: {
                 shrink: true,
               },
             }}
-          />{" "}
+          />
           <TextField
-            id="outlined-number"
+            id="resp_bytes"
             label="resp bytes"
             type="number"
+            value={formData.resp_bytes}
+            onChange={handleFormChange}
+            name="resp_bytes"
             slotProps={{
               inputLabel: {
                 shrink: true,
@@ -51,9 +53,12 @@ function Form() {
         </div>
         <div>
           <TextField
-            id="outlined-number"
+            id="orig_pkts"
             label="orig pkts"
             type="number"
+            value={formData.orig_pkts}
+            onChange={handleFormChange}
+            name="orig_pkts"
             slotProps={{
               inputLabel: {
                 shrink: true,
@@ -61,9 +66,12 @@ function Form() {
             }}
           />
           <TextField
-            id="outlined-number"
+            id="orig_ip_bytes"
             label="orig ip bytes"
             type="number"
+            value={formData.orig_ip_bytes}
+            onChange={handleFormChange}
+            name="orig_ip_bytes"
             slotProps={{
               inputLabel: {
                 shrink: true,
@@ -71,29 +79,33 @@ function Form() {
             }}
           />
           <TextField
-            id="outlined-number"
+            id="resp_pkts"
             label="resp pkts"
             type="number"
+            value={formData.resp_pkts}
+            onChange={handleFormChange}
+            name="resp_pkts"
             slotProps={{
               inputLabel: {
                 shrink: true,
               },
             }}
           />
-         
         </div>
         <div>
-        <TextField
-            id="outlined-number"
+          <TextField
+            id="resp_ip_bytes"
             label="resp ip bytes"
             type="number"
+            value={formData.resp_ip_bytes}
+            onChange={handleFormChange}
+            name="resp_ip_bytes"
             slotProps={{
               inputLabel: {
                 shrink: true,
               },
             }}
           />
-         
         </div>
       </Box>
     </div>
