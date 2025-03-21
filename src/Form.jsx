@@ -13,7 +13,7 @@ function Form({ formData, handleFormChange }) {
         <div>
           <TextField
             id="duration"
-            label="duration"
+            label="Connection Duration (seconds)"
             type="number"
             value={formData.duration}
             onChange={handleFormChange}
@@ -26,7 +26,7 @@ function Form({ formData, handleFormChange }) {
           />
           <TextField
             id="orig_bytes"
-            label="orig bytes"
+            label="Sent Bytes (Origin)"
             type="number"
             value={formData.orig_bytes}
             onChange={handleFormChange}
@@ -39,7 +39,7 @@ function Form({ formData, handleFormChange }) {
           />
           <TextField
             id="resp_bytes"
-            label="resp bytes"
+            label="Received Bytes (Responder)"
             type="number"
             value={formData.resp_bytes}
             onChange={handleFormChange}
@@ -54,7 +54,7 @@ function Form({ formData, handleFormChange }) {
         <div>
           <TextField
             id="orig_pkts"
-            label="orig pkts"
+            label="Packets Sent (Origin)"
             type="number"
             value={formData.orig_pkts}
             onChange={handleFormChange}
@@ -67,7 +67,7 @@ function Form({ formData, handleFormChange }) {
           />
           <TextField
             id="orig_ip_bytes"
-            label="orig ip bytes"
+            label="Sent IP Bytes (Origin)"
             type="number"
             value={formData.orig_ip_bytes}
             onChange={handleFormChange}
@@ -80,7 +80,7 @@ function Form({ formData, handleFormChange }) {
           />
           <TextField
             id="resp_pkts"
-            label="resp pkts"
+            label="Packets Received (Responder)"
             type="number"
             value={formData.resp_pkts}
             onChange={handleFormChange}
@@ -95,7 +95,7 @@ function Form({ formData, handleFormChange }) {
         <div>
           <TextField
             id="resp_ip_bytes"
-            label="resp ip bytes"
+            label="Received IP Bytes (Responder)"
             type="number"
             value={formData.resp_ip_bytes}
             onChange={handleFormChange}
